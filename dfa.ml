@@ -1,12 +1,12 @@
 open Regexp
 
-(* définition abstraite d'une construction d'automate déterministe 
+(* définition abstraite d'une construction d'automate déterministe
    à partir d'une expression régulière *)
 
 module type DFA = sig
   type 'a state
   val init : 'a regexp -> 'a state
-  val next : 'a state -> 'a -> 'a state 
+  val next : 'a state -> 'a -> 'a state
   val final : 'a state -> bool
 end
 
@@ -18,9 +18,11 @@ end
 
 module Acceptor = struct
 
-  module Make (DFA:DFA) : ACCEPTOR = struct 
-
-      (* A COMPLETER *)
-  end  
+  module Make (DFA:DFA) : ACCEPTOR = struct
+    let accept reg word =
+      let ending_state =
+        List.fold_left (fun st a -> next st a) (init reg) word in
+      final ending_state
+  end
 
 end

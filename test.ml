@@ -2,16 +2,16 @@ open Regexp
 
 (* TESTS PARTIE 1 *)
 
-let string_of_regexp e = 
+let string_of_regexp e =
   let rec f = function
     | Eps -> "."
     | Sym x -> String.make 1 x
     | Alt (e1,e2) -> Format.sprintf "(%s+%s)" (f e1) (f e2)
     | Seq (e1,e2) -> Format.sprintf "%s%s" (f e1) (f e2)
-    | Rep e -> Format.sprintf "(%s)*" (f e) 
+    | Rep e -> Format.sprintf "(%s)*" (f e)
   in f e
 
-let string_of_word w = 
+let string_of_word w =
   let rec f = function
     | [] -> ""
     | a::w -> (String.make 1 a) ^ (f w)
@@ -44,10 +44,10 @@ let tests1 = [
 
 ]
 
-      
-let treat accept (e,u,b) = 
+
+let treat accept (e,u,b) =
   Format.printf "%s@.%s@."
-    (string_of_regexp e) 
+    (string_of_regexp e)
     (string_of_word u);
   Format.printf "%s@.@." (if accept e u=b then "OK" else "FAILED")
 
