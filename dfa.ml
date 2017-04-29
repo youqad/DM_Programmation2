@@ -21,8 +21,8 @@ module Acceptor = struct
   module Make (DFA:DFA) : ACCEPTOR = struct
     let accept reg word =
       let ending_state =
-        List.fold_left (fun st a -> next st a) (init reg) word in
-      final ending_state
+        List.fold_left (fun st a -> DFA.next st a) (DFA.init reg) word in
+      DFA.final ending_state
   end
 
 end
