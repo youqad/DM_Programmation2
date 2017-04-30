@@ -38,9 +38,12 @@ let tests1 = [
   Rep (Sym 'a') , ['a'] , true;
   Rep (Sym 'a') , ['a';'a'] , true;
   Rep (Sym 'a') , ['a';'a';'a'] , true;
-  Rep (Sym 'a') , ['a';'b';'a'] , false
+  Rep (Sym 'a') , ['a';'b';'a'] , false;
 
-(* A COMPLETER ... *)
+  (* A COMPLETER ... *)
+
+  Seq(Seq(Rep (Alt(Seq (Sym 'a',Sym 'a'), Sym 'b')), Alt (Sym 'a', Eps)), Sym 'b') , ['a';'a';'a';'b'] , true;
+  Seq(Seq(Rep (Alt(Seq (Sym 'a',Sym 'a'), Sym 'b')), Alt (Sym 'a', Eps)), Sym 'b'), ['a';'b';'a'] , false;
 
 ]
 
@@ -59,7 +62,7 @@ let test1 accept = List.iter (treat accept) tests1
 
 (* a completer *)
 
-
+let test2 accept = List.iter (treat accept) tests1
 
 (* TESTS PARTIE 3 *)
 

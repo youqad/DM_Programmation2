@@ -52,12 +52,9 @@ end
 
 (* UTILISATION DU MODULE ET DES FONCTEURS *)
 
-let accept e u = 
+module Acc = Acceptor.Make(Part1)
 
-  (* A COMPLETER *)
-  
-  true
-
+let accept (e : 'a regexp) (u: 'a word) : bool = Acc.accept e u
 
 
 
