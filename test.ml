@@ -67,3 +67,18 @@ let test2 accept = List.iter (treat accept) tests1
 (* TESTS PARTIE 3 *)
 
 (* a completer *)
+
+let rec wregexp_of_regexp = function
+    | Eps -> Eps
+    | Sym x -> Sym (fun a -> if a=x then true else false)
+    | Alt (e1,e2) -> Alt (wregexp_of_regexp e1, wregexp_of_regexp e2)
+    | Seq (e1,e2) -> Seq (wregexp_of_regexp e1, wregexp_of_regexp e2)
+    | Rep e -> Rep (wregexp_of_regexp e)
+
+let treat3 accept (e,u,b) =
+  Format.printf "%s@.%s@."
+    (string_of_regexp e)
+    (string_of_word u);
+  Format.printf "%s@.@." (if accept (wregexp_of_regexp e) u=b then "OK" else "FAILED")
+
+let test3 accept = List.iter (treat3 accept) tests1
