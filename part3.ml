@@ -46,18 +46,59 @@ module WeighterSpec : WEIGHTER = functor (W:SEMIRING) -> struct
 end
 
 
-
 (* PONDERATEUR CONSTRUIT EN GENERALISANT LA PARTIE 2 *)
 
-(* module Weighter : WEIGHTER = functor (W:SEMIRING) -> struct *)
 
-(*     (\* a completer *\) *)
-(* end *)
+module WeighterSpecFast : WEIGHTER = functor (W:SEMIRING) -> struct
+  let zero = W.sum []
+  let one = W.prod []
+
+  (* on procède de manière analogue à la partie 2 :
+         - false devient maintenant zero
+         - true correspond à un élément du semi-anneau non nul
+     La epsilon-clôture ne se contente plus de "pousser les marques"
+     le plus à droite possible : le paramètre b est un poids (du semi-anneau)
+     qui essaye de se propager le plus à droite possible dans l'expression régulière
+  *)
+
+  let rec eval wreg u =
+    let rec semiringize = function
+      | Eps -> Eps
+      | Sym a -> Sym (a, zero)
+      | Alt (reg1, reg2) -> Alt (semiringize reg1, semiringize reg2)
+      | Seq (reg1, reg2) -> Seq (semiringize reg1, semiringize reg2)
+      | Rep reg -> Rep (semiringize reg) in
+    let rec next_reg reg a =
+      match reg with
+      | Eps -> zero, Eps
+      | Sym (f, t) -> W.prod [t; f a], Sym (f, zero)
+      | Alt (reg1, reg2) -> plus (next_reg reg1 a) (next_reg reg2 a)
+      | Seq (reg1, reg2) -> concat (next_reg reg1 a) (next_reg reg2 a)
+      | Rep reg1 -> star (next_reg reg1 a)
+    and plus (b1, r1) (b2, r2) = W.sum [b1; b2], Alt (r1, r2)
+    and concat (b1, r1) (b2, r2) = let b2', r2' = eps_closure r2 b1 in
+      W.sum [b2; b2'], Seq (r1, r2')
+    and star (b, r) = let b', r' = eps_closure r b in
+      W.sum [b'; b], Rep r'
+    and eps_closure reg b = match reg with
+      | Eps -> b, Eps
+      | Sym (f, b') -> zero, Sym (f, W.sum [b'; b])
+      | Alt (reg1, reg2) -> plus (eps_closure reg1 b) (eps_closure reg2 b)
+      | Seq (reg1, reg2) -> concat (eps_closure reg1 b) (zero, reg2)
+      | Rep r -> let b', r' = eps_closure r b in W.sum [b'; b], Rep r' in
+    let init reg = eps_closure (semiringize reg) one in
+    let next st a = next_reg (snd st) a in
+    let final st = fst st in
+    let accept reg word =
+      let ending =
+        List.fold_left (fun st a -> next st a) (init reg) word in
+      final ending in
+    accept wreg u
+end
 
 
 (* TESTS *)
 
-(* a completer *)
 
 module Bool : (SEMIRING with type t = bool) = struct
   type t = bool
@@ -65,14 +106,23 @@ module Bool : (SEMIRING with type t = bool) = struct
   let prod = List.fold_left (&&) true
 end
 
+module Nat : (SEMIRING with type t = int) = struct
+  type t = int
+  let sum = List.fold_left (+) 0
+  let prod = List.fold_left ( * ) 1
+end
+
+module WeighterBool = WeighterSpec(Bool)
+
+module WeighterNat = WeighterSpec(Nat)
+
+module WeighterBoolFast = WeighterSpecFast(Bool)
+
+module WeighterNatFast = WeighterSpecFast(Nat)
 
 
-module WeighS = WeighterSpec(Bool)
+(* LANCEMENT DES TESTS *)
 
-let accept = WeighS.eval
+let () = testBool (WeighterBool.eval) (WeighterBoolFast.eval)
 
-
-
-(* LANCEMENT DES TESTS -- NE PAS MODIFIER SOUS CETTE LIGNE *)
-
-let () = test3 accept
+let () = testNat (WeighterNat.eval) (WeighterNatFast.eval)

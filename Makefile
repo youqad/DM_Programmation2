@@ -1,4 +1,4 @@
-default: part1.byte
+default: part1.byte part3.byte
 
 ALL = regexp.ml wregexp.ml dfa.ml test.ml
 BYTE = $(ALL:.ml=.cmo)
@@ -7,7 +7,7 @@ OCAMLC = ocamlc
 OCAMLOPT = ocamlopt
 OCAMLDEP = ocamldep
 
-%.byte: %.ml $(BYTE) 
+%.byte: %.ml $(BYTE)
 	$(OCAMLC) $(BYTE) $< -o $@
 
 %.cmo: %.ml
@@ -22,6 +22,8 @@ OCAMLDEP = ocamldep
 -include .depend
 .depend: $(wildcard *.ml *.mli)
 	$(OCAMLDEP) $(wildcard *.ml *.mli) > .depend
+
+# ocamlc regexp.cmo wregexp.cmo dfa.cmo test.cmo part1.cmo part2.ml -o part2.byte
 
 .PHONY: clean
 clean:

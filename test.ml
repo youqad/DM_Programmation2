@@ -2,6 +2,7 @@ open Regexp
 
 (* TESTS PARTIE 1 *)
 
+
 let string_of_regexp e =
   let rec f = function
     | Eps -> "."
@@ -44,41 +45,80 @@ let tests1 = [
 
   Seq(Seq(Rep (Alt(Seq (Sym 'a',Sym 'a'), Sym 'b')), Alt (Sym 'a', Eps)), Sym 'b') , ['a';'a';'a';'b'] , true;
   Seq(Seq(Rep (Alt(Seq (Sym 'a',Sym 'a'), Sym 'b')), Alt (Sym 'a', Eps)), Sym 'b'), ['a';'b';'a'] , false;
-
+  Alt((Sym 'a') , (Rep (Sym 'a'))), ['a'], true;
+  Seq(Alt((Sym 'a') , (Rep (Sym 'a'))), Alt((Sym 'b') , (Rep (Sym 'b')))), ['a';'b'], true;
+  Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), ['a'; 'b'; 'b'], true;
+  Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), ['b'; 'a'], true;
+  Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), ['a'; 'b'; 'a'], false;
+  Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')), ['a'; 'b'; 'a'], false;
+  Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), ['b'; 'a'; 'b'; 'a'], true;
+  Rep (Seq(Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), Sym 'c')), ['b'; 'a'; 'b'; 'a'; 'a'; 'a'; 'a'; 'a'; 'c'; 'a'; 'a'; 'c'], true;
+  Rep (Alt (Seq(Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), Sym 'c'), Seq (Sym 'c', Sym 'd'))), ['b'; 'a'; 'b'; 'a'; 'a'; 'a'; 'a'; 'a'; 'c'; 'a'; 'a'; 'c'; 'c'; 'd'], true;
+  Rep (Seq (Rep (Seq(Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), Sym 'c')), Sym 'b')), ['b'; 'a'; 'b'; 'a'; 'a'; 'a'; 'a'; 'a'; 'c'; 'a'; 'a'; 'b'; 'a'; 'b'; 'a'; 'c'; 'b'; 'a'; 'a'; 'c'; 'b'], true;
+  Seq( Seq(Seq(Rep (Alt(Seq (Sym 'a',Sym 'a'), Sym 'b')), Alt (Sym 'a', Eps)), Sym 'b'), Rep (Seq (Rep (Seq(Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), Sym 'c')), Sym 'b'))), ['a';'a';'a';'b';'b'; 'a'; 'b'; 'a'; 'a'; 'a'; 'a'; 'a'; 'c'; 'a'; 'a'; 'b'; 'a'; 'b'; 'a'; 'c'; 'b'; 'a'; 'a'; 'c'; 'b'], true;
+   Seq(Rep (Seq(Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), Sym 'c')), Rep (Seq (Rep (Seq(Alt (Seq (Sym 'a', Rep (Sym 'b')), Rep (Seq (Alt (Sym 'a', Sym 'b'), Sym 'a')) ), Sym 'c')), Sym 'b'))), ['b'; 'a'; 'b'; 'a'; 'a'; 'a'; 'a'; 'a'; 'c'; 'a'; 'a'; 'c'; 'b'; 'a'; 'b'; 'a'; 'a'; 'a'; 'a'; 'a'; 'c'; 'a'; 'a'; 'b'; 'a'; 'b'; 'a'; 'c'; 'b'; 'a'; 'a'; 'c'; 'b'], true;
 ]
 
 
-let treat accept (e,u,b) =
-  Format.printf "%s@.%s@."
+let hr = "________________________________________" (* horizontal rule *)
+let time label f x y =
+    let t = Sys.time() in
+    let fxy = f x y in
+    Printf.printf "Temps d'exécution %s : %fs\n" label (Sys.time() -. t);
+    fxy
+
+let treat accept label (e,u,b) =
+  Format.printf "%s@.%s@.%s@." hr
     (string_of_regexp e)
     (string_of_word u);
-  Format.printf "%s@.@." (if accept e u=b then "OK" else "FAILED")
+  Format.printf "%s@.@." (if time label accept e u = b then "OK" else "FAILED")
 
-let test1 accept = List.iter (treat accept) tests1
+let test1 accept label = List.iter (treat accept label) tests1
 
 
 
 (* TESTS PARTIE 2 *)
 
-(* a completer *)
+let treatCompare accept1 accept2 (e,u,b) =
+  Format.printf "%s@.%s@.%s@." hr
+    (string_of_regexp e)
+    (string_of_word u);
+  Format.printf "%s@.@." (if time "part1" accept1 e u = b then "OK" else "FAILED");
+  Format.printf "%s@.@." (if time "part2" accept2 e u = b then "OK" else "FAILED")
 
-let test2 accept = List.iter (treat accept) tests1
+
+let test2 accept label = List.iter (treat accept label) tests1
+
+let testCompare1and2 accept1 accept2 = List.iter (treatCompare accept1 accept2) tests1
 
 (* TESTS PARTIE 3 *)
 
-(* a completer *)
 
-let rec wregexp_of_regexp = function
-    | Eps -> Eps
-    | Sym x -> Sym (fun a -> if a=x then true else false)
-    | Alt (e1,e2) -> Alt (wregexp_of_regexp e1, wregexp_of_regexp e2)
-    | Seq (e1,e2) -> Seq (wregexp_of_regexp e1, wregexp_of_regexp e2)
-    | Rep e -> Rep (wregexp_of_regexp e)
+let wregexp_of_regexpNat = apply_morphism (fun a x -> if a=x then 1 else 0)
 
-let treat3 accept (e,u,b) =
-  Format.printf "%s@.%s@."
+
+(* Semi-anneau : Booléens *)
+
+let treatBool accept acceptFast (e,u,b) =
+  Format.printf "%s@.%s@.%s@." hr
     (string_of_regexp e)
     (string_of_word u);
-  Format.printf "%s@.@." (if accept (wregexp_of_regexp e) u=b then "OK" else "FAILED")
+  Format.printf "%s@.@." (if time "pondérateur booléen efficace" acceptFast (apply_morphism (=) e) u=b then "OK" else "FAILED");
+  try Format.printf "%s@.@." (if time "pondérateur booléen lent" accept (apply_morphism (=) e) u=b then "OK" else "FAILED")
+  with Stack_overflow -> Format.printf "%s@.@." "pondérateur booléen lent : Stack overflow !"
 
-let test3 accept = List.iter (treat3 accept) tests1
+let testBool accept acceptFast = List.iter (treatBool accept acceptFast) tests1
+
+(* ---------------------------------------------------------------------------- *)
+
+(* Semi-anneau : Entiers naturels *)
+
+let treatNat accept acceptFast (e,u,b) =
+  Format.printf "%s@.%s@.%s@." hr
+    (string_of_regexp e)
+    (string_of_word u);
+  Format.printf "%d@.@." (time "pondérateur naturel efficace" acceptFast (wregexp_of_regexpNat e) u);
+  try Format.printf "%d@.@." (time "pondérateur naturel lent" accept (wregexp_of_regexpNat e) u)
+  with Stack_overflow -> Format.printf "%s@.@." "pondérateur booléen lent : Stack overflow !"
+
+let testNat accept acceptFast = List.iter (treatNat accept acceptFast) tests1

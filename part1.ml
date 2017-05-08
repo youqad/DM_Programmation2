@@ -60,4 +60,4 @@ let accept (e : 'a regexp) (u: 'a word) : bool = Acc.accept e u
 
 (* LANCEMENT DES TESTS -- NE PAS MODIFIER SOUS CETTE LIGNE *)
 
-let () = test1 accept
+let () = test1 accept "part1"
