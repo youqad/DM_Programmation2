@@ -1,0 +1,600 @@
+________________________________________
+.
+
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+.
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+a
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+a
+b
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+a
+ab
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+a
+
+Temps d'exécution part1 : 0.000000s
+OK
+
+________________________________________
+(a+b)
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+(a+b)
+b
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+(a+b)
+c
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+ab
+ab
+Temps d'exécution part1 : 0.000003s
+OK
+
+________________________________________
+ab
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+ab
+b
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+ab
+
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+a.
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+.a
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+..
+
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+(a)*
+
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+(a)*
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+(a)*
+aa
+Temps d'exécution part1 : 0.000002s
+OK
+
+________________________________________
+(a)*
+aaa
+Temps d'exécution part1 : 0.000003s
+OK
+
+________________________________________
+(a)*
+aba
+Temps d'exécution part1 : 0.000003s
+OK
+
+________________________________________
+((aa+b))*(a+.)b
+aaab
+Temps d'exécution part1 : 0.000008s
+OK
+
+________________________________________
+((aa+b))*(a+.)b
+aba
+Temps d'exécution part1 : 0.000003s
+OK
+
+________________________________________
+(a+(a)*)
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+________________________________________
+(a+(a)*)(b+(b)*)
+ab
+Temps d'exécution part1 : 0.000004s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+abb
+Temps d'exécution part1 : 0.000004s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+ba
+Temps d'exécution part1 : 0.000003s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+aba
+Temps d'exécution part1 : 0.000004s
+OK
+
+________________________________________
+((a+b)a)*
+aba
+Temps d'exécution part1 : 0.000003s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+baba
+Temps d'exécution part1 : 0.000003s
+OK
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*
+babaaaaacaac
+Temps d'exécution part1 : 0.000012s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c+cd))*
+babaaaaacaaccd
+Temps d'exécution part1 : 0.000014s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000031s
+OK
+
+________________________________________
+((aa+b))*(a+.)b(((a(b)*+((a+b)a)*)c)*b)*
+aaabbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000033s
+OK
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000155s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000497s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000161s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacbbc
+Temps d'exécution part1 : 0.000235s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacbbabaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.021266s
+OK
+
+________________________________________
+((((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000240s
+OK
+
+________________________________________
+.
+
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000000s
+OK
+
+________________________________________
+.
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000001s
+OK
+
+________________________________________
+a
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000001s
+OK
+
+________________________________________
+a
+b
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+a
+ab
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+a
+
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000000s
+OK
+
+________________________________________
+(a+b)
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000001s
+OK
+
+________________________________________
+(a+b)
+b
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000001s
+OK
+
+________________________________________
+(a+b)
+c
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+ab
+ab
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000003s
+OK
+
+________________________________________
+ab
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000001s
+OK
+
+________________________________________
+ab
+b
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000001s
+OK
+
+________________________________________
+ab
+
+Temps d'exécution part1 : 0.000000s
+OK
+
+Temps d'exécution part2 : 0.000000s
+OK
+
+________________________________________
+a.
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000001s
+OK
+
+________________________________________
+.a
+a
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+..
+
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+(a)*
+
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+(a)*
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+(a)*
+aa
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+(a)*
+aaa
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+(a)*
+aba
+Temps d'exécution part1 : 0.000001s
+OK
+
+Temps d'exécution part2 : 0.000003s
+OK
+
+________________________________________
+((aa+b))*(a+.)b
+aaab
+Temps d'exécution part1 : 0.000006s
+OK
+
+Temps d'exécution part2 : 0.000006s
+OK
+
+________________________________________
+((aa+b))*(a+.)b
+aba
+Temps d'exécution part1 : 0.000003s
+OK
+
+Temps d'exécution part2 : 0.000005s
+OK
+
+________________________________________
+(a+(a)*)
+a
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000002s
+OK
+
+________________________________________
+(a+(a)*)(b+(b)*)
+ab
+Temps d'exécution part1 : 0.000003s
+OK
+
+Temps d'exécution part2 : 0.000004s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+abb
+Temps d'exécution part1 : 0.000003s
+OK
+
+Temps d'exécution part2 : 0.000006s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+ba
+Temps d'exécution part1 : 0.000002s
+OK
+
+Temps d'exécution part2 : 0.000004s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+aba
+Temps d'exécution part1 : 0.000004s
+OK
+
+Temps d'exécution part2 : 0.000007s
+OK
+
+________________________________________
+((a+b)a)*
+aba
+Temps d'exécution part1 : 0.000003s
+OK
+
+Temps d'exécution part2 : 0.000004s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+baba
+Temps d'exécution part1 : 0.000003s
+OK
+
+Temps d'exécution part2 : 0.000005s
+OK
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*
+babaaaaacaac
+Temps d'exécution part1 : 0.000011s
+OK
+
+Temps d'exécution part2 : 0.000012s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c+cd))*
+babaaaaacaaccd
+Temps d'exécution part1 : 0.000011s
+OK
+
+Temps d'exécution part2 : 0.000017s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000025s
+OK
+
+Temps d'exécution part2 : 0.000024s
+OK
+
+________________________________________
+((aa+b))*(a+.)b(((a(b)*+((a+b)a)*)c)*b)*
+aaabbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000028s
+OK
+
+Temps d'exécution part2 : 0.000040s
+OK
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000117s
+OK
+
+Temps d'exécution part2 : 0.000059s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000425s
+OK
+
+Temps d'exécution part2 : 0.000162s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000160s
+OK
+
+Temps d'exécution part2 : 0.000106s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacbbc
+Temps d'exécution part1 : 0.000166s
+OK
+
+Temps d'exécution part2 : 0.000096s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacbbabaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.018157s
+OK
+
+Temps d'exécution part2 : 0.000653s
+OK
+
+________________________________________
+((((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution part1 : 0.000241s
+OK
+
+Temps d'exécution part2 : 0.000134s
+OK
+

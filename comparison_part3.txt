@@ -1,0 +1,704 @@
+________________________________________
+.
+
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000000s
+OK
+
+________________________________________
+.
+a
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+a
+a
+Temps d'exécution pondérateur booléen efficace : 0.000003s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000000s
+OK
+
+________________________________________
+a
+b
+Temps d'exécution pondérateur booléen efficace : 0.000001s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000001s
+OK
+
+________________________________________
+a
+ab
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+a
+
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000000s
+OK
+
+________________________________________
+(a+b)
+a
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+(a+b)
+b
+Temps d'exécution pondérateur booléen efficace : 0.000003s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000001s
+OK
+
+________________________________________
+(a+b)
+c
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+ab
+ab
+Temps d'exécution pondérateur booléen efficace : 0.000005s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+ab
+a
+Temps d'exécution pondérateur booléen efficace : 0.000004s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000001s
+OK
+
+________________________________________
+ab
+b
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+ab
+
+Temps d'exécution pondérateur booléen efficace : 0.000003s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+a.
+a
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000001s
+OK
+
+________________________________________
+.a
+a
+Temps d'exécution pondérateur booléen efficace : 0.000004s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+..
+
+Temps d'exécution pondérateur booléen efficace : 0.000001s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+(a)*
+
+Temps d'exécution pondérateur booléen efficace : 0.000001s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000001s
+OK
+
+________________________________________
+(a)*
+a
+Temps d'exécution pondérateur booléen efficace : 0.000002s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000003s
+OK
+
+________________________________________
+(a)*
+aa
+Temps d'exécution pondérateur booléen efficace : 0.000003s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000003s
+OK
+
+________________________________________
+(a)*
+aaa
+Temps d'exécution pondérateur booléen efficace : 0.000005s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000005s
+OK
+
+________________________________________
+(a)*
+aba
+Temps d'exécution pondérateur booléen efficace : 0.000006s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000004s
+OK
+
+________________________________________
+((aa+b))*(a+.)b
+aaab
+Temps d'exécution pondérateur booléen efficace : 0.000017s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000070s
+OK
+
+________________________________________
+((aa+b))*(a+.)b
+aba
+Temps d'exécution pondérateur booléen efficace : 0.000016s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000029s
+OK
+
+________________________________________
+(a+(a)*)
+a
+Temps d'exécution pondérateur booléen efficace : 0.000003s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000002s
+OK
+
+________________________________________
+(a+(a)*)(b+(b)*)
+ab
+Temps d'exécution pondérateur booléen efficace : 0.000010s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000007s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+abb
+Temps d'exécution pondérateur booléen efficace : 0.000014s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000021s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+ba
+Temps d'exécution pondérateur booléen efficace : 0.000012s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000010s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+aba
+Temps d'exécution pondérateur booléen efficace : 0.000020s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000028s
+OK
+
+________________________________________
+((a+b)a)*
+aba
+Temps d'exécution pondérateur booléen efficace : 0.000012s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000022s
+OK
+
+________________________________________
+(a(b)*+((a+b)a)*)
+baba
+Temps d'exécution pondérateur booléen efficace : 0.000022s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.000059s
+OK
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*
+babaaaaacaac
+Temps d'exécution pondérateur booléen efficace : 0.000099s
+OK
+
+Temps d'exécution pondérateur booléen lent : 0.472826s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c+cd))*
+babaaaaacaaccd
+Temps d'exécution pondérateur booléen efficace : 0.000079s
+OK
+
+Temps d'exécution pondérateur booléen lent : 2.873426s
+OK
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacb
+Temps d'exécution pondérateur booléen efficace : 0.000148s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+((aa+b))*(a+.)b(((a(b)*+((a+b)a)*)c)*b)*
+aaabbabaaaaacaababacbaacb
+Temps d'exécution pondérateur booléen efficace : 0.006545s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur booléen efficace : 0.006312s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur booléen efficace : 0.001472s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur booléen efficace : 0.000579s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacbbc
+Temps d'exécution pondérateur booléen efficace : 0.000775s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacbbabaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur booléen efficace : 0.005706s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+((((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur booléen efficace : 0.003258s
+OK
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+.
+
+Temps d'exécution pondérateur naturel efficace : 0.000004s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000002s
+1
+
+________________________________________
+.
+a
+Temps d'exécution pondérateur naturel efficace : 0.000003s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000001s
+0
+
+________________________________________
+a
+a
+Temps d'exécution pondérateur naturel efficace : 0.000002s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000000s
+1
+
+________________________________________
+a
+b
+Temps d'exécution pondérateur naturel efficace : 0.000002s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000000s
+0
+
+________________________________________
+a
+ab
+Temps d'exécution pondérateur naturel efficace : 0.000003s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000000s
+0
+
+________________________________________
+a
+
+Temps d'exécution pondérateur naturel efficace : 0.000002s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000000s
+0
+
+________________________________________
+(a+b)
+a
+Temps d'exécution pondérateur naturel efficace : 0.000003s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000002s
+1
+
+________________________________________
+(a+b)
+b
+Temps d'exécution pondérateur naturel efficace : 0.000005s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000002s
+1
+
+________________________________________
+(a+b)
+c
+Temps d'exécution pondérateur naturel efficace : 0.000005s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000001s
+0
+
+________________________________________
+ab
+ab
+Temps d'exécution pondérateur naturel efficace : 0.000006s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000004s
+1
+
+________________________________________
+ab
+a
+Temps d'exécution pondérateur naturel efficace : 0.000004s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000004s
+0
+
+________________________________________
+ab
+b
+Temps d'exécution pondérateur naturel efficace : 0.000004s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000002s
+0
+
+________________________________________
+ab
+
+Temps d'exécution pondérateur naturel efficace : 0.000002s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000003s
+0
+
+________________________________________
+a.
+a
+Temps d'exécution pondérateur naturel efficace : 0.000002s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000002s
+1
+
+________________________________________
+.a
+a
+Temps d'exécution pondérateur naturel efficace : 0.000003s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000008s
+1
+
+________________________________________
+..
+
+Temps d'exécution pondérateur naturel efficace : 0.000002s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000001s
+1
+
+________________________________________
+(a)*
+
+Temps d'exécution pondérateur naturel efficace : 0.000003s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000001s
+1
+
+________________________________________
+(a)*
+a
+Temps d'exécution pondérateur naturel efficace : 0.000003s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000004s
+1
+
+________________________________________
+(a)*
+aa
+Temps d'exécution pondérateur naturel efficace : 0.000006s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000013s
+1
+
+________________________________________
+(a)*
+aaa
+Temps d'exécution pondérateur naturel efficace : 0.000005s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000007s
+1
+
+________________________________________
+(a)*
+aba
+Temps d'exécution pondérateur naturel efficace : 0.000006s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000007s
+0
+
+________________________________________
+((aa+b))*(a+.)b
+aaab
+Temps d'exécution pondérateur naturel efficace : 0.000016s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000083s
+1
+
+________________________________________
+((aa+b))*(a+.)b
+aba
+Temps d'exécution pondérateur naturel efficace : 0.000022s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000035s
+0
+
+________________________________________
+(a+(a)*)
+a
+Temps d'exécution pondérateur naturel efficace : 0.000007s
+2
+
+Temps d'exécution pondérateur naturel lent : 0.000002s
+2
+
+________________________________________
+(a+(a)*)(b+(b)*)
+ab
+Temps d'exécution pondérateur naturel efficace : 0.000007s
+4
+
+Temps d'exécution pondérateur naturel lent : 0.000006s
+4
+
+________________________________________
+(a(b)*+((a+b)a)*)
+abb
+Temps d'exécution pondérateur naturel efficace : 0.000012s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000017s
+1
+
+________________________________________
+(a(b)*+((a+b)a)*)
+ba
+Temps d'exécution pondérateur naturel efficace : 0.000010s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000008s
+1
+
+________________________________________
+(a(b)*+((a+b)a)*)
+aba
+Temps d'exécution pondérateur naturel efficace : 0.000011s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000017s
+0
+
+________________________________________
+((a+b)a)*
+aba
+Temps d'exécution pondérateur naturel efficace : 0.000009s
+0
+
+Temps d'exécution pondérateur naturel lent : 0.000012s
+0
+
+________________________________________
+(a(b)*+((a+b)a)*)
+baba
+Temps d'exécution pondérateur naturel efficace : 0.000014s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.000036s
+1
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*
+babaaaaacaac
+Temps d'exécution pondérateur naturel efficace : 0.000054s
+1
+
+Temps d'exécution pondérateur naturel lent : 0.485473s
+1
+
+________________________________________
+(((a(b)*+((a+b)a)*)c+cd))*
+babaaaaacaaccd
+Temps d'exécution pondérateur naturel efficace : 0.000088s
+1
+
+Temps d'exécution pondérateur naturel lent : 2.890778s
+1
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacb
+Temps d'exécution pondérateur naturel efficace : 0.000139s
+1
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+((aa+b))*(a+.)b(((a(b)*+((a+b)a)*)c)*b)*
+aaabbabaaaaacaababacbaacb
+Temps d'exécution pondérateur naturel efficace : 0.000277s
+1
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur naturel efficace : 0.000425s
+5
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur naturel efficace : 0.001426s
+13
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur naturel efficace : 0.000749s
+5
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacbbc
+Temps d'exécution pondérateur naturel efficace : 0.000607s
+0
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*(((a(b)*+((a+b)a)*)c)*b)*((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*
+babaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacbbabaaaaacaababacbaacbbabaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur naturel efficace : 0.006962s
+1173
+
+pondérateur booléen lent : Stack overflow !
+
+________________________________________
+((((a(b)*+((a+b)a)*)c)*+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)+((a(b)*+((a+b)a)*)c)*(((a(b)*+((a+b)a)*)c)*b)*)
+babaaaaacaacbabaaaaacaababacbaacb
+Temps d'exécution pondérateur naturel efficace : 0.001204s
+10
+
+pondérateur booléen lent : Stack overflow !
+

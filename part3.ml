@@ -126,3 +126,13 @@ module WeighterNatFast = WeighterSpecFast(Nat)
 let () = testBool (WeighterBool.eval) (WeighterBoolFast.eval)
 
 let () = testNat (WeighterNat.eval) (WeighterNatFast.eval)
+
+
+(* On vérifie que les pondérateurs coïncident bien :
+
+   "./part3.byte > comparison_part3.txt"
+
+   Le pondérateur rapide est largement meilleur sur les plus gros exemples,
+   où le pondérateur lent entraîne même des "Stack Overflow" !
+
+*)
